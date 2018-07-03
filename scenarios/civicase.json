@@ -1,0 +1,44 @@
+{
+  "scenarios": [
+    {
+      "label": "Civicase - Dashboard",
+      "url": "{url}/civicrm/case?reset=1",
+      "onReadyScript": "civicase/dashboard.js"
+    },
+    {
+      "label": "Civicase - Find Cases - Search",
+      "url": "{url}/civicrm/case/search?reset=1"
+    },
+    {
+      "label": "Civicase - Find My Cases",
+      "url": "{url}/civicrm/case?reset=1",
+      "onReadyScript": "civicase/find.js"
+    },
+    {
+      "label": "Civicase - Case Report",
+      "url": "{url}/civicrm/report/list?compid=7&reset=1"
+    },
+    {
+      "label": "Civicase - Add Case",
+      "url": "{url}/civicrm/case/add?action=add&context=standalone&reset=1",
+      "onReadyScript": "common/wait-for-wysiwyg.js"
+    },
+    {
+      "label": "Civicase - Manage Case",
+      "url": "{url}/civicrm/case?reset=1",
+      "onReadyScript": "civicase/manage.js"
+    },
+    {
+      "label": "Civicase - Delete Case",
+      "url": "{url}/civicrm/case?reset=1",
+      "selectors": [".ui-dialog"],
+      "onReadyScript": "civicase/delete.js"
+    },
+    {
+      "label": "Civicase - Assign to others case",
+      "url": "{url}/civicrm/case?reset=1",
+      "selectors": [".ui-dialog"],
+      "onReadyScript": "civicase/assign-to-others.js"
+    }
+  ]
+}
