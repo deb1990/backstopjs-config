@@ -62,7 +62,7 @@ jobs:
           chmod -R 777 $GITHUB_WORKSPACE/${{ env.TEST_SITE_FOLDER }}
       - name: Install BackstopJS
         run: |
-          git clone https://github.com/compucorp/backstopjs-config.git --depth 1
+          git clone https://github.com/compucorp/backstopjs-config.git --branch ${{ github.event.inputs.reference_shoreditch_branch }}
           cd ${{ env.BACKSTOP_DIR }}
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
           nvm install
